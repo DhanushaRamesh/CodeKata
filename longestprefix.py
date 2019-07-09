@@ -20,10 +20,12 @@ for i in range(n):
 	lst.append(stri)
 	
 call=longest()
-for i in range(1,n):
-	longetprefix=call.prefix(lst[0],lst[i])
+for i in range(0,n):
+	for j in range(i):
+			longetprefix=call.prefix(lst[i],lst[j])
 for i in range(len(longetprefix)):
 	if i == len(longetprefix)-1:
 		print(longetprefix[i])
 	else:
 		print(longetprefix[i],end="")
+
